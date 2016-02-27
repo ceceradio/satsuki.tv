@@ -1,0 +1,66 @@
+body {
+  font-family: Roboto, sans-serif;
+  background: #0053B9; }
+
+body > p, h1, h2, h3, h4, h5, h6 {
+  color: #fff; }
+
+.nav-container {
+  background: #fff; }
+
+nav.white-bg {
+  background: #fff; }
+
+.twitter-tweet {
+  margin: auto; }
+
+.main-container {
+  margin-top: 1rem; }
+
+.navbar {
+  border-radius: 0; }
+
+.navbar-brand {
+  padding-left: 3rem; }
+
+.navbar button {
+  color: rgba(0, 0, 0, 0.8); }
+
+.navbar-brand > .logo {
+  position: absolute;
+  height: 2.9rem;
+  top: 0.25rem;
+  left: 0.25rem;
+  display: inline; }
+
+.accounts a img {
+  height: 3em;
+  display: block;
+  margin: auto; }
+
+.accounts div {
+  padding: 0.25em; }
+
+.accounts a {
+  padding: 0.25em;
+  width: 100%;
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+  display: block; }
+
+.accounts a:focus,
+.accounts a:hover,
+.accounts a:active,
+.accounts a:visited {
+  text-decoration: none; }
+
+.card-img-top {
+  width: 100%;
+  height: auto; }
+
+@media (min-width: 768px) {
+  .card-columns {
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4; } }
