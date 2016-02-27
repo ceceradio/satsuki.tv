@@ -20,8 +20,7 @@ module.exports = function(grunt) {
     copy: {
       bootstrap: {
         files: [
-          {expand: true, src: ['_variables.scss'], dest: 'node_modules/bootstrap/', filter: 'isFile'},
-          {expand: true, src: ['sauce_browsers.yml'], dest: 'node_modules/bootstrap/grunt/', filter: 'isFile'},
+          {expand: true, src: ['_variables.scss'], dest: 'node_modules/bootstrap/scss/', filter: 'isFile'}
         ]
       }
     },

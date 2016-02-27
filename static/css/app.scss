@@ -58,7 +58,12 @@ nav.white-bg {
 .accounts a:visited {
   text-decoration: none;
 }
-
+.card {
+  color: $gray-dark;
+  p, h1, h2, h3, h4, h5, h6 {
+    color: $gray-dark;
+  }
+}
 .card-img-top {
   width:100%;
   height:auto;
