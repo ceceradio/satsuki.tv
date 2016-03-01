@@ -2,7 +2,12 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     concurrent: {
-      default: ['watch', 'connect']
+      default: {
+        tasks: ['watch:css', 'watch:bootstrap', 'connect'],
+        options: {
+            logConcurrentOutput: true
+        }
+      }
     },
     connect: {
       server: {
@@ -24,8 +29,12 @@ module.exports = function(grunt) {
     },
     watch: {
       css: {
-        files: '**/*.scss',
+        files: ['_variables.scss', 'static/**/*.scss'],
         tasks: ['sass']
+      },
+      bootstrap: {
+        files: ['_variables.scss'],
+        tasks: ['compileBootstrap']
       }
     },
     copy: {
