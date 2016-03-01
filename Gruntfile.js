@@ -1,6 +1,17 @@
 module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    concurrent: {
+      default: ['watch', 'connect']
+    },
+    connect: {
+      server: {
+        options: {
+          port: 3030,
+          keepalive: true
+        }
+      }
+    },
     sass: {
       dist: {
         options: {
@@ -18,11 +29,16 @@ module.exports = function(grunt) {
       }
     },
     copy: {
-      bootstrap: {
+      bootstrapIn: {
         files: [
           {expand: true, src: ['_variables.scss'], dest: 'node_modules/bootstrap/scss/', filter: 'isFile'}
         ]
-      }
+      },
+      bootstrapOut: {
+        files: [
+          {expand: true, cwd:'node_modules/bootstrap/dist/css/', src: ['*'], dest: 'lib/bootstrap/dist/css/', filter: 'isFile'}
+        ]
+      },
     },
     auto_install: {
       bootstrap: {
@@ -43,6 +59,6 @@ module.exports = function(grunt) {
     }
   });
   require('load-grunt-tasks')(grunt);
-  grunt.registerTask('compileBootstrap',['auto_install:bootstrap','copy:bootstrap','grunt:bootstrap'])
-  grunt.registerTask('default',['watch']);
+  grunt.registerTask('compileBootstrap',['auto_install:bootstrap','copy:bootstrapIn','grunt:bootstrap','copy:bootstrapOut'])
+  grunt.registerTask('default',['concurrent:default']);
 }

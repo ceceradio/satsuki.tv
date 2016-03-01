@@ -11,11 +11,11 @@ angular.module('app.home', [])
           document.getElementById('tweet1'),
           {}
         );
-        twttr.widgets.createTweet(
+        /*twttr.widgets.createTweet(
           tweets.splice(Math.floor(Math.random()*tweets.length),1)[0],
           document.getElementById('tweet2'),
           {}
-        );
+        );*/
       }
     },
     templateUrl: 'components/home/home.html'

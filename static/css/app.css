@@ -26,6 +26,9 @@ nav.white-bg {
 .navbar button {
   color: rgba(0, 0, 0, 0.8); }
 
+.bio {
+  padding-top: 0.4em; }
+
 .navbar-brand > .logo {
   position: absolute;
   height: 2.9rem;
