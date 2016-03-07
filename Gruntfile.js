@@ -29,18 +29,18 @@ module.exports = function(grunt) {
     },
     watch: {
       css: {
-        files: ['_variables.scss', 'static/**/*.scss'],
+        files: ['static/**/*.scss'],
         tasks: ['sass']
       },
       bootstrap: {
-        files: ['_variables.scss'],
+        files: ['static/css/_variables.scss'],
         tasks: ['compileBootstrap']
       }
     },
     copy: {
       bootstrapIn: {
         files: [
-          {expand: true, src: ['_variables.scss'], dest: 'node_modules/bootstrap/scss/', filter: 'isFile'}
+          {expand: true, cwd:'static/css/', src: ['_variables.scss'], dest: 'node_modules/bootstrap/scss/', filter: 'isFile'}
         ]
       },
       bootstrapOut: {

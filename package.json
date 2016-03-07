@@ -8,11 +8,11 @@
   "dependencies": {
     "angular": "^1.5.0",
     "angular-new-router": "^0.5.3",
-    "bootstrap": "git://github.com/twbs/bootstrap.git#v4-dev",
     "jquery": "^2.2.1",
     "tether": "^1.2.0"
   },
   "devDependencies": {
+    "bootstrap": "git://github.com/twbs/bootstrap.git#v4-dev",
     "grunt": "^0.4.5",
     "grunt-auto-install": "^0.3.0",
     "grunt-concurrent": "^2.2.1",
