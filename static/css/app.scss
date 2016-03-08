@@ -1,5 +1,6 @@
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/_mixins";
+$a-tags: 'a, a:active, a:hover, a:visited';
 
 body {
   font-family: Roboto, sans-serif;
@@ -37,43 +38,55 @@ nav.white-bg {
   left:0.25rem;
   display:inline;
 }
-.accounts a img {
-  height:3em;
-  display:block;
-  margin:auto;
-}
-.accounts div {
-  padding:0.25em;
-}
-.accounts a {
-  padding:0.25em;
-  width:100%;
-  font-size:1.5rem;
-  color:#fff;
-  text-align:center;
-  display:block;
-}
-.accounts a:focus,
-.accounts a:hover,
-.accounts a:active,
-.accounts a:visited {
-  text-decoration: none;
+.accounts {
+  a {
+    padding:0.25em;
+    width:100%;
+    font-size:1.5rem;
+    color:#fff;
+    text-align:center;
+    display:block;
+    img {
+      height:3em;
+      display:block;
+      margin:auto;
+    }
+  }
+  #{$a-tags} {
+    text-decoration: none;
+  }
+  div {
+    padding:0.25em;
+  }
 }
 .card {
   color: $gray-dark;
   p, h1, h2, h3, h4, h5, h6 {
     color: $gray-dark;
   }
-}
-.card-img-top {
-  width:100%;
-  height:auto;
+  .footnote {
+    margin-bottom: 0;
+  }
+  #{$a-tags} {
+    color: $brand-primary
+  }
+  .card-img-top {
+    width:100%;
+    height:auto;
+  }
 }
 
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(sm) {
   .card-columns {
-    -webkit-column-count: 4;
-    -moz-column-count: 4;
-    column-count: 4;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
+}
+@include media-breakpoint-up(lg) {
+  .card-columns {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
   }
 }
