@@ -1,7 +1,13 @@
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/_mixins";
-$a-tags: 'a, a:active, a:hover, a:visited';
-
+$a-tags: 'a:not(.btn), a:active:not(.btn), a:hover:not(.btn), a:visited:not(.btn)';
+a.clickable {
+  cursor:pointer;
+  cursor:hand;
+}
+a.no-underline:hover {
+  text-decoration:none;
+}
 body {
   font-family: Roboto, sans-serif;
   background:#0053B9;
@@ -11,6 +17,13 @@ body > p, h1, h2, h3, h4, h5, h6 {
 }
 .nav-container {
   background:#fff;
+  .list-group-item {
+    border:none;
+    color: $brand-primary;
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 nav.white-bg {
   background:#fff;
@@ -75,6 +88,9 @@ nav.white-bg {
     height:auto;
   }
 }
+.blog-line {
+  margin-bottom:15px;
+}
 
 @include media-breakpoint-up(sm) {
   .card-columns {
@@ -88,5 +104,10 @@ nav.white-bg {
     -webkit-column-count: 3;
     -moz-column-count: 3;
     column-count: 3;
+  }
+  .card-columns.large {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
   }
 }

@@ -1,3 +1,10 @@
+a.clickable {
+  cursor: pointer;
+  cursor: hand; }
+
+a.no-underline:hover {
+  text-decoration: none; }
+
 body {
   font-family: Roboto, sans-serif;
   background: #0053B9; }
@@ -7,6 +14,11 @@ body > p, h1, h2, h3, h4, h5, h6 {
 
 .nav-container {
   background: #fff; }
+  .nav-container .list-group-item {
+    border: none;
+    color: #0053B9; }
+    .nav-container .list-group-item:hover {
+      text-decoration: none; }
 
 nav.white-bg {
   background: #fff; }
@@ -47,7 +59,7 @@ nav.white-bg {
     height: 3em;
     display: block;
     margin: auto; }
-.accounts a, .accounts a:active, .accounts a:hover, .accounts a:visited {
+.accounts a:not(.btn), .accounts a:active:not(.btn), .accounts a:hover:not(.btn), .accounts a:visited:not(.btn) {
   text-decoration: none; }
 .accounts div {
   padding: 0.25em; }
@@ -58,11 +70,14 @@ nav.white-bg {
     color: #373a3c; }
   .card .footnote {
     margin-bottom: 0; }
-  .card a, .card a:active, .card a:hover, .card a:visited {
+  .card a:not(.btn), .card a:active:not(.btn), .card a:hover:not(.btn), .card a:visited:not(.btn) {
     color: #0053B9; }
   .card .card-img-top {
     width: 100%;
     height: auto; }
+
+.blog-line {
+  margin-bottom: 15px; }
 
 @media (min-width: 544px) {
   .card-columns {
@@ -73,4 +88,9 @@ nav.white-bg {
   .card-columns {
     -webkit-column-count: 3;
     -moz-column-count: 3;
-    column-count: 3; } }
+    column-count: 3; }
+
+  .card-columns.large {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2; } }

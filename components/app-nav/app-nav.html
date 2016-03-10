@@ -10,9 +10,13 @@
     <li class="nav-item" ng-class="{'active': isActive('projects')}">
       <a class="nav-link" ng-link="['Projects']">Projects</a>
     </li>
+    <li class="nav-item" ng-class="{'active': isActive('blog')}">
+      <a class="nav-link" ng-link="['Blog']">Blog</a>
+    </li>
   </ul>
 </nav>
 <div class="list-group collapse navbar-toggleable-sm hidden-md-up" id="CollapsingNavbar">
-  <a ng-link="['Home']" class="list-group-item">About</a>
-  <a ng-link="['Projects']" class="list-group-item">Projects</a>
+  <a data-toggle="collapse" data-target="#CollapsingNavbar" ng-link="['Home']" class="list-group-item">About</a>
+  <a data-toggle="collapse" data-target="#CollapsingNavbar" ng-link="['Projects']" class="list-group-item">Projects</a>
+  <a data-toggle="collapse" data-target="#CollapsingNavbar" ng-link="['Blog']" class="list-group-item">Blog</a>
 </div>
