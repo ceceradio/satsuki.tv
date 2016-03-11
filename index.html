@@ -1,132 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
   <head>
+    <base href="/">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>satsuki.tv</title>
     <link href='//fonts.googleapis.com/css?family=Roboto:400,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="static/vendor/bootstrap/dist/css/style.css">
-    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/tether/dist/css/tether.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/css/app.css">
     <meta name="google-site-verification" content="5AH6uVxTvgmIQnuAVJhZLAMyL8W1qMKRodMNFNCYivI" />
   </head>
   <body>
-    <ul id="profiles">
-      <li>
-        <a class="logo">
-          <img src="static/img/satsuki.png"/>
-          satsuki.tv
-        </a>
-      </li>
-      <li>
-        <p>Project Manager, Software Engineer, Intersectional Feminist, Twitter Account Haver
-      </li>
-      <li class="longdivider"></li>
-      <li>
-        <a href="http://github.com/satsukitv">
-          <img src="static/img/github.png"/>
-          github
-        </a>
-      </li>
-      <li>
-        <a href="http://twitter.com/satsukitv">
-          <img src="static/img/twitter.png"/>
-          twitter
-        </a>
-      </li>
-      <li>
-        <a href="http://devfluid.itch.io/"/>
-          <img src="static/img/itchio.png"/>
-          itch.io
-        </a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/in/charlie-wagner-6532b46"/>
-          <img src="static/img/lunkedout.png"/>
-          linkedin
-        </a>
-      </li>
-    </ul>
+    <app></app>
     
-    <ul id="projects">
-      <li><h2>Projects</h2></li>
-      <li>
-        <div class="opener" data-child="voom"><span class="arrow">&#9654;</span> Voom</div>
-        <p id="voom">Voom breaks up periods of sitting with physician designed "Work" Outs. Available on Windows, Mac, iOS, Android, and in your browser. Built with PHP, MySQL, Joomla, node.js, jQuery, jQuery Mobile, Phonegap, and Adobe AIR.<br/><a href="http://voomwell.com">voomwell.com</a></p>
-      </li>
-      <li>
-        <div class="opener" data-child="gocruso"><span class="arrow">&#9654;</span> goCruso</div>
-        <p id="gocruso">Simplify your restaurant's internet presence and get more customers in your doors. Consumers can find food at a menu item level. Built with PHP, MySQL, Joomla, SOLR, and jQuery. <br/><a href="http://gocruso.com">gocruso.com</a></p>
-      </li>
-      <li>
-        <div class="opener" data-child="dataliercore"><span class="arrow">&#9654;</span> Datalier Core</div>
-        <p id="dataliercore">Data folding library to quickly and painlessly process data points into a consumable format for charting plugins. Javascript. <br/><a href="http://github.com/satsukitv/datalier-node">Node.JS Package & jQuery plugins</a><br/><a href="http://satsuki.tv/datalier">Examples</a></p>
-      </li>
-      <li>
-        <div class="opener" data-child="gender"><span class="arrow">&#9654;</span> jQuery Gender Field Plugin</div>
-        <p id="gender">jQuery plugin to easily create a transgender-friendly gender form field.<br/><a href="http://github.com/satsukitv/jQuery-genderField">Github Repository</a><br/><a href="http://jsfiddle.net/Lda8yvsc/">Example</a></p>
-      </li>
-      <li>
-        <div class="opener" data-child="datareporter"><span class="arrow">&#9654;</span> Data Reporter</div>
-        <p id="datareporter">Windows Service to report data usage to a remote server. Built on node.js.<br/><a href="http://github.com/satsukitv/devfluid-data-reporter">Github Repository</a></p>
-      </li>
-      <li>
-        <div class="opener" data-child="twitterpuller"><span class="arrow">&#9654;</span> Twitter Puller</div>
-        <p id="twitterpuller">Retrieves tweets from a twitter user and outputs word cloud and simple stats. Built on node.js.<br/><a href="https://github.com/satsukitv/devfluid-twitter-puller">Github Repository</a></p>
-      </li>
-      <!--
-      <li>
-        <div class="opener" data-child="datalier"><span class="arrow">&#9654;</span> Datalier</div>
-        <p id="datalier">Analytics platform for game developers oriented towards improving the craft of making games. <br/>
-        <a href="http://github.com/satsukitv/datalier-web">Webapp Github Repo (Coming Soon)</a><br/>
-        <a href="http://github.com/satsukitv/datalier-endpoint">Data Collection Endpoint Github Repo (Coming Soon)</a></p>
-      </li>-->
-      <li class="divider"></li>
-      <li>
-        <div class="opener" data-child="vjf"><span class="arrow">&#9654;</span> Virus Jigglin' Fever</div>
-        <p id="vjf">Arcade style puzzle action game on Windows, Mac, Ubuntu, and Android.<br/><a href="http://devfluid.itch.io/virus-jigglin-fever">Buy it on itch.io</a></p>
-      </li>
-      <li>
-        <div class="opener" data-child="ljgiv"><span class="arrow">&#9654;</span> Leather Jacket Gaiden IV</div>
-        <p id="ljgiv">Difficult platformer game with a theme of clothes, clothing, and transformation.<br/><a href="http://devfluid.itch.io/leather-jacket-gaiden-iv">Try it Free on itch.io</a></p>
-      </li>
-      <li>
-        <div class="opener" data-child="terminalrt"><span class="arrow">&#9654;</span> Terminal RT</div>
-        <p id="terminalrt">Free SSH2 terminal emulator app for the Windows Store. Built with Granados RT, the first public and open source WinRT Library for SSH connections.<br/><a href="https://github.com/satsukitv/granadosrt">Github Repo</a><br/><a href="http://apps.microsoft.com/windows/en-us/app/terminal-rt/d62a6b2a-bc53-4078-b688-3223bf310266">See it in the Windows Store</a></p>
-      </li>
-      <li>
-        <div class="opener" data-child="simpleserver"><span class="arrow">&#9654;</span> Simple Server</div>
-        <p id="simpleserver">Cross platform and open source Minecraft server wrapper designed for high reliability and speed.<br/><a href="https://github.com/satsukitv/SimpleServer">Original Repo</a><br/><a href="https://github.com/SimpleServer/SimpleServer">Final Public Repo</a></p>
-      </li>
-      
-    </ul>
-    <div class="clear"></div>
-    <!--
-    <div class="container">
-      <p>Charts driven by <a href="http://github.com/satsukitv/datalier-node">Datalier</a> and <a href="https://github.com/satsukitv/devfluid-twitter-puller">Twitter Puller</a></p>
-      <div class="sparklineContainer"><span id="sparkline"></span><br/>Tweets Per Hour</div>
-      <div class="sparklineContainer"><span id="favline"></span><br/>Favs / RTs per hour</div>
-    </div>-->
-    <div class="container">
-      <table border="0" cellpadding="2" cellspacing="0" style="border:2px solid #8258AC;margin:0px auto;font:normal 12px Hack,Menlo,Monaco,"Courier New",Courier,monospace;background:#7446a2 none;color:#ffffff;">
-        <thead>
-          <tr>
-            <th style="text-align:left;font-size:15px;background:#532a7d none;">Cuties Online</th>
-          </tr>
-        </thead>
-       <tbody>
-          <tr>
-            <td style="text-align:center;background-color:#7446A2;">
-              <a href="http://cuties.online/?Go&amp;Prev&amp;8" style="color:#eeeeee;" target="_top">Previous</a> |
-              <a href="http://cuties.online/" style="color:#eeeeee;" target="_top">Home</a> |
-              <a href="http://cuties.online/?Join" style="color:#eeeeee;" target="_top">Join</a> |
-              <a href="http://cuties.online/?Go&amp;Rand&amp;8" style="color:#eeeeee;" target="_top">Random</a> |
-              <a href="http://cuties.online/?Go&amp;Next&amp;8" style="color:#eeeeee;" target="_top">Next</a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="index.js"></script>
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-sanitize/angular-sanitize.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/tether/dist/js/tether.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="lib/angular_1_router.js"></script>
+    <script src="components/app/app.js"></script>
+    <script src="components/app-nav/app-nav.js"></script>
+    <script src="components/projects/projects.js"></script>
+    <script src="components/blog/blog.js"></script>
+    <script src="components/home/home.js"></script>
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
   </body>
 </html>
