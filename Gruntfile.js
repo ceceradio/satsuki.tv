@@ -89,7 +89,7 @@ module.exports = function(grunt) {
     rsync: {
       options: {
         args: ["-avz"],
-        exclude: [".*","*.scss","spec","node_modules","Gruntfile.js","karma.config.js"],
+        exclude: [".git*",".sass*",".travis*","*.DS_Store","*.scss","spec","node_modules","Gruntfile.js","karma.config.js"],
         recursive: true
       },
       deploy: {
