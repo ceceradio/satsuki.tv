@@ -49,7 +49,7 @@ module.exports = function(grunt) {
       },
       bootstrapOut: {
         files: [
-          {expand: true, cwd:'node_modules/bootstrap/dist/', src: ['*'], dest: 'lib/bootstrap/dist/', filter: 'isFile'}
+          {expand: true, cwd:'node_modules/bootstrap/dist/', src: ['**/*'], dest: 'lib/bootstrap/dist/', filter: 'isFile'}
         ]
       },
       dist: {
