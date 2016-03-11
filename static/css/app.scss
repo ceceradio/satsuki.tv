@@ -91,6 +91,16 @@ nav.white-bg {
 .blog-line {
   margin-bottom:15px;
 }
+.card .tumblr-text {
+  .tmblr-full {
+    margin-left:-1.25rem;
+    margin-right:-1.25rem;
+    img {
+      width:100%;
+      height:auto;
+    }
+  }
+}
 
 @include media-breakpoint-up(sm) {
   .card-columns {

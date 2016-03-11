@@ -5,11 +5,12 @@
 </div>
 <div ng-hide="data.posts" class="text-xs-center"><img src="/static/img/hourglass.svg"/></div>
 <div class="card-columns large" ng-show="data.posts" ng-cloak>
-  <div class="card" ng-repeat="post in data.posts">
+  <div class="card blog-card" ng-repeat="post in data.posts">
     <a ng-show="post.image"><img class="card-img-top" ng-src="{{post.image}}" alt="Picture for {{post.title}}"></a>
     <div class="card-block">
       <h1 class="card-title">{{post.title}}</h1>
-      <p class="card-text"><p ng-bind-html="getPostBody(post)"></p><a class="clickable" ng-show="post.body_abstract && data.currentPost!=post" ng-click="data.currentPost=post">Read more...</a></p>
+      <p class="card-text tumblr-text" ng-bind-html="getPostBody(post)"></p>
+      <a class="clickable" ng-show="post.body_abstract && data.currentPost!=post" ng-click="data.currentPost=post">Read more...</a>
       <p class="card-text">
         <small class="text-muted">Posted on {{(post.timestamp*1000)|date}}</small>
       </p>

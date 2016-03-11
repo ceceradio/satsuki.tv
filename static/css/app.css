@@ -79,6 +79,13 @@ nav.white-bg {
 .blog-line {
   margin-bottom: 15px; }
 
+.card .tumblr-text .tmblr-full {
+  margin-left: -1.25rem;
+  margin-right: -1.25rem; }
+  .card .tumblr-text .tmblr-full img {
+    width: 100%;
+    height: auto; }
+
 @media (min-width: 544px) {
   .card-columns {
     -webkit-column-count: 2;
