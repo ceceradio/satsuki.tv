@@ -4,7 +4,7 @@ app.config(function($locationProvider) {
   $locationProvider.html5Mode(true);
 })
 app.component('app', {
-  templateUrl: 'components/app/app.html',
+  templateUrl: 'components/app/app.html?@@buildtime',
   $routeConfig: [
     { path: '/', component: 'home', name: 'Home', useAsDefault: true },
     { path: '/projects', component: 'projects', name: 'Projects' },

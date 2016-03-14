@@ -39,7 +39,13 @@ module.exports = function(config) {
 
     ngHtml2JsPreprocessor: {
         // the name of the Angular module to create
-        moduleName: "templates"
+        moduleName: "templates",
+        cacheIdFromPath: function(filepath) {
+            // example strips 'public/' from anywhere in the path
+            // module(app/templates/template.html) => app/public/templates/template.html
+            var cacheId = filepath + "?@@buildtime";
+            return cacheId;
+        },
     },
 
 
