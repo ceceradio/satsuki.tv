@@ -11,6 +11,14 @@ angular.module('twttr', [])
     };
   });
 
+angular.module('tumblr', [])
+  .service('$tumblr',function() {
+    return {
+      getPosts: jasmine.createSpy('createTweet').and.returnValue({then: jasmine.createSpy('then')}),
+      getPost: jasmine.createSpy('createTweet').and.returnValue({then: jasmine.createSpy('then')})  
+    };
+  });
+
  
 describe('AppComponent', function(){
   //mock Application to allow us to inject our own dependencies
