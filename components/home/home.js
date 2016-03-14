@@ -14,5 +14,5 @@ angular.module('app.home', ['twttr'])
         });
       }
     },
-    templateUrl: 'components/home/home.html'
+    templateUrl: 'components/home/home.html?@@buildtime'
   });

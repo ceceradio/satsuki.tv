@@ -14,5 +14,5 @@ angular.module('app.blogPost', ['ngComponentRouter','ngSanitize','tumblr'])
         );
       };
     },
-    templateUrl: 'components/blogPost/blogPost.html'
+    templateUrl: 'components/blogPost/blogPost.html?@@buildtime'
   });

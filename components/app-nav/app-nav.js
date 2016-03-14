@@ -8,6 +8,6 @@ angular.module('app.app-nav', [])
         return ($location.url() == "/"+partial);
       }
     },
-    templateUrl: 'components/app-nav/app-nav.html'
+    templateUrl: 'components/app-nav/app-nav.html?@@buildtime'
   });
   

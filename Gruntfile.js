@@ -1,5 +1,11 @@
 var _ = require('lodash');
 var serveStatic = require('serve-static');
+var buildtime = Date.now();
+if (typeof String.prototype.endsWith !== 'function') {
+  String.prototype.endsWith = function(suffix) {
+    return this.indexOf(suffix, this.length - suffix.length) !== -1;
+  };
+}
 module.exports = function(grunt) {
   var distLibPath = 'dist/lib/';
   var defaultFilesObj = {expand: true, dest: distLibPath, filter: 'isFile'};
@@ -60,9 +66,17 @@ module.exports = function(grunt) {
       },
       dist: {
         files: [
-          {expand: true, cwd:'node_modules/', src: [], dest: 'dist/lib', filter: 'isFile'},
-          {expand: true, cwd:'', src: ['components/**/*','static/**/*','lib/**/*', 'index.html', 'favicon.ico'], dest: 'dist/', filter: 'isFile'}
-        ]
+          {expand: true, cwd:'', src: ["components/**/*", "static/**/*", "lib/**/*", "index.html", "package.json", ".htaccess" ], dest: 'dist/', filter: 'isFile'},
+        ],
+        options: {
+          noProcess: ['**/*.{png,gif,jpg,ico,psd,ttf,otf,woff,svg}'],
+          process: function (content, srcpath) {
+            if (srcpath.endsWith(".html") || srcpath.endsWith(".js")) {
+              return content.replace(/\@\@buildtime/g,buildtime);
+            }
+            return content;
+          }
+        }
       }
     },
     auto_install: {
@@ -100,7 +114,7 @@ module.exports = function(grunt) {
       },
       deploy: {
         options: {
-          src: "./",
+          src: "./dist/",
           dest: "<%= distInfo.destination %>",
           host: "<%= distInfo.username %>@<%= distInfo.host %>"
           //delete: true // Careful this option could cause data loss, read the docs!
@@ -109,19 +123,7 @@ module.exports = function(grunt) {
     }
   });
   require('load-grunt-tasks')(grunt);
-  /*
-  grunt.registerTask('findDependencies', 'A task for finding dependencies', function() {
-    var text = grunt.file.read('index.html');
-    var filePaths = text.match(/\"(node_modules\/.+)\"/g);
-    var files = [];
-    for (var i in filePaths) {
-      var file = filePaths[i];
-      files.push(file.replace(/\"/g,"").replace("node_modules/",""));
-    }
-    grunt.config.set('copy.dist.files.src',files);
-  });
-  */
-  grunt.registerTask('dist',['rsync','sshexec']);
+  grunt.registerTask('dist',['copy:dist','rsync','sshexec']);
   grunt.registerTask('compileBootstrap',['auto_install:bootstrap','copy:bootstrapIn','grunt:bootstrap','copy:bootstrapOut'])
   grunt.registerTask('default',['concurrent:default']);
 }

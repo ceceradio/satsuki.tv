@@ -69,5 +69,5 @@ angular.module('app.projects', [])
         return url;
       }
     },
-    templateUrl: 'components/projects/projects.html'
+    templateUrl: 'components/projects/projects.html?@@buildtime'
   });

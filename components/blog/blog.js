@@ -20,5 +20,5 @@ angular.module('app.blog', ['ngSanitize','tumblr'])
         return post.body;
       }
     },
-    templateUrl: 'components/blog/blog.html'
+    templateUrl: 'components/blog/blog.html?@@buildtime'
   });
