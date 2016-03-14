@@ -1,4 +1,5 @@
 var _ = require('lodash');
+var serveStatic = require('serve-static');
 module.exports = function(grunt) {
   var distLibPath = 'dist/lib/';
   var defaultFilesObj = {expand: true, dest: distLibPath, filter: 'isFile'};
@@ -17,7 +18,12 @@ module.exports = function(grunt) {
       server: {
         options: {
           port: 3030,
-          keepalive: true
+          keepalive: true,
+          middleware: function (connect, options) {
+            var optBase = (typeof options.base === 'string') ? [options.base] : options.base;
+            return [require('connect-modrewrite')(['!(\\..+)$ / [L]'])].concat(
+              optBase.map(function(path){ return serveStatic(path); }));
+          }
         }
       }
     },
