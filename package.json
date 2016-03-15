@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "grunt",
-    "test": "./node_modules/.bin/karma start karma.config.js --single-run --browsers PhantomJS",
-    "karma": "./node_modules/.bin/karma start karma.config.js"
+    "test": "./node_modules/.bin/karma start karma.config.js --single-run --browsers PhantomJS"
   },
   "license": "UNLICENSED",
   "dependencies": {
