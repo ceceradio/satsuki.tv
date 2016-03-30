@@ -12,7 +12,9 @@
       <p class="card-text tumblr-text" ng-bind-html="getPostBody(post)"></p>
       <a class="clickable" ng-show="post.body_abstract" ng-link="['BlogPost', {id: post.id } ]">Read more...</a>
       <p class="card-text">
-        <small class="text-muted">Posted on {{(post.timestamp*1000)|date}}</small>
+        <a class="clickable"  ng-link="['BlogPost', {id: post.id } ]">
+          <small class="text-muted">Posted on {{(post.timestamp*1000)|date}}</small>
+        </a>
       </p>
       <div class="row">
         <div class="col-xs-6">

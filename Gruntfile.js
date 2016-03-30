@@ -9,9 +9,13 @@ if (typeof String.prototype.endsWith !== 'function') {
 module.exports = function(grunt) {
   var distLibPath = 'dist/lib/';
   var defaultFilesObj = {expand: true, dest: distLibPath, filter: 'isFile'};
+  var distInfo = {};
+  if (grunt.file.exists('distInfo.json')) {
+    distInfo = grunt.file.readJSON('distInfo.json');
+  }
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    distInfo: grunt.file.readJSON('distInfo.json'),
+    distInfo: distInfo,
     concurrent: {
       default: {
         tasks: ['watch:css', 'watch:bootstrap', 'connect'],
