@@ -9,7 +9,7 @@ body {
   font-family: Roboto, sans-serif;
   background: #0053B9; }
 
-body > p, h1, h2, h3, h4, h5, h6 {
+body > p, body > h1, body > h2, body > h3, body > h4, body > h5, body > h6 {
   color: #fff; }
 
 .nav-container {
@@ -66,15 +66,35 @@ nav.white-bg {
 
 .card {
   color: #373a3c; }
-  .card p, .card h1, .card h2, .card h3, .card h4, .card h5, .card h6 {
+
+.card-columns .card {
+  display: block;
+  text-indent: 0em;
+  /* To show paragraph starts. */
+  page-break-inside: avoid;
+  /* For Firefox. */
+  -webkit-column-break-inside: avoid;
+  /* For Chrome & friends. */
+  break-inside: avoid;
+  /* For standard browsers like IE. :-) */ }
+  .card-columns .card p, .card-columns .card h1, .card-columns .card h2, .card-columns .card h3, .card-columns .card h4, .card-columns .card h5, .card-columns .card h6 {
     color: #373a3c; }
-  .card .footnote {
+  .card-columns .card .footnote {
     margin-bottom: 0; }
-  .card a:not(.btn), .card a:active:not(.btn), .card a:hover:not(.btn), .card a:visited:not(.btn) {
+  .card-columns .card a:not(.btn), .card-columns .card a:active:not(.btn), .card-columns .card a:hover:not(.btn), .card-columns .card a:visited:not(.btn) {
     color: #0053B9; }
-  .card .card-img-top {
+  .card-columns .card .card-img-top {
     width: 100%;
     height: auto; }
+  .card-columns .card * {
+    text-indent: 0em;
+    /* To show paragraph starts. */
+    page-break-inside: avoid;
+    /* For Firefox. */
+    -webkit-column-break-inside: avoid;
+    /* For Chrome & friends. */
+    break-inside: avoid;
+    /* For standard browsers like IE. :-) */ }
 
 .blog-line {
   margin-bottom: 15px; }

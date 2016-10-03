@@ -12,8 +12,10 @@ body {
   font-family: Roboto, sans-serif;
   background:#0053B9;
 }
-body > p, h1, h2, h3, h4, h5, h6 {
-  color: #fff;
+body {
+  > p, > h1, > h2, > h3, > h4, > h5, > h6 {
+    color: #fff;
+  }
 }
 .nav-container {
   background:#fff;
@@ -74,6 +76,8 @@ nav.white-bg {
 }
 .card {
   color: $gray-dark;
+}
+.card-columns .card {
   p, h1, h2, h3, h4, h5, h6 {
     color: $gray-dark;
   }
@@ -86,6 +90,17 @@ nav.white-bg {
   .card-img-top {
     width:100%;
     height:auto;
+  }
+  display:block;
+  text-indent: 0em; /* To show paragraph starts. */
+  page-break-inside: avoid; /* For Firefox. */
+  -webkit-column-break-inside: avoid; /* For Chrome & friends. */
+  break-inside: avoid; /* For standard browsers like IE. :-) */
+  * {
+    text-indent: 0em; /* To show paragraph starts. */
+    page-break-inside: avoid; /* For Firefox. */
+    -webkit-column-break-inside: avoid; /* For Chrome & friends. */
+    break-inside: avoid; /* For standard browsers like IE. :-) */
   }
 }
 .blog-line {

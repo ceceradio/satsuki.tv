@@ -5,7 +5,7 @@
       <a target="_blank" ng-href="{{getUrl(project)}}"><h4 class="card-title">{{project.name}}</h4></a>
       <p class="card-text">{{project.description}}</p>
       <p class="card-text footnote" target="_blank" ng-show="project.url"><small class="text-muted">URL: <a ng-href="{{project.url}}">{{getUrlLabel(project)}}</a></small></p>
-      <p class="card-text footnote" target="_blank" ng-show="project.repository"><small class="text-muted">Code: <a ng-href="{{project.repository}}">{{getRepositoryLabel(project.repository)}}</a></small></p>
+      <p class="card-text footnote" target="_blank" ng-show="project.repository"><small class="text-muted">Source: <a ng-href="{{project.repository}}">{{getRepositoryLabel(project.repository)}}</a></small></p>
     </div>
   </div>
 </div>

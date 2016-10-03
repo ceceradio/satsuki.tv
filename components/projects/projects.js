@@ -3,10 +3,10 @@ angular.module('app.projects', [])
     controller: function($scope) {
       var projects = [
         {
-          name: "Answer a Thing",
+          name: "Special Answer",
           url: "https://aat.devfluid.com",
           repository: "https://github.com/satsukitv/answer-a-thing",
-          description: "A creative online game where players earn points by drawing or writing the best answer to someone's question, and by guessing whose answer will chosen as the best! A fun and open-ended game that's great for breaking the ice or having fun with old friends!",
+          description: "A creative online game where players earn points by drawing or writing answers to a question, and guessing whose answer will chosen as the best! A fun and open-ended game that's great for breaking the ice and having fun!",
           image: false
         },
         {
@@ -14,6 +14,22 @@ angular.module('app.projects', [])
           url: false,
           repository: "https://github.com/satsukitv/genders",
           description: "A json file with an incomplete list of genders that is useful to developers creating social platforms or personal information forms.",
+          image: false
+        },
+        {
+          name: "grunt-aem-mobile",
+          url: "https://www.npmjs.com/package/grunt-aem-mobile",
+          urlLabel: "npm",
+          repository: "https://github.com/SixDimensions/grunt-aem-mobile",
+          description: "A grunt module that provides common AEM Mobile publishing workflows. Upload articles and thumbnails, publish articles and collections, and manage collections.",
+          image: false
+        },
+        {
+          name: "aem-mobile-api",
+          url: "https://www.npmjs.com/package/aem-mobile-api",
+          urlLabel: "npm",
+          repository: "https://github.com/SixDimensions/aem-mobile-api-js",
+          description: "JavaScript library that provides publishing API functionality for AEM Mobile.",
           image: false
         },
         {
