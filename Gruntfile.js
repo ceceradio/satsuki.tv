@@ -127,7 +127,7 @@ module.exports = function(grunt) {
     }
   });
   require('load-grunt-tasks')(grunt);
-  grunt.registerTask('dist',['copy:dist','rsync','sshexec']);
+  grunt.registerTask('dist',['sass','copy:dist','rsync','sshexec']);
   grunt.registerTask('compileBootstrap',['auto_install:bootstrap','copy:bootstrapIn','grunt:bootstrap','copy:bootstrapOut'])
   grunt.registerTask('default',['concurrent:default']);
 }
