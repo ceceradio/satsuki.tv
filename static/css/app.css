@@ -79,7 +79,7 @@ nav.white-bg {
   /* For Chrome & friends. */
   break-inside: avoid;
   /* For standard browsers like IE. :-) */ }
-  .card-columns .card p, .card-columns .card h1, .card-columns .card h2, .card-columns .card h3, .card-columns .card h4, .card-columns .card h5, .card-columns .card h6, .card-columns .card a {
+  .card-columns .card .card-text p, .card-columns .card .card-text h1, .card-columns .card .card-text h2, .card-columns .card .card-text h3, .card-columns .card .card-text h4, .card-columns .card .card-text h5, .card-columns .card .card-text h6, .card-columns .card .card-text a {
     color: #373a3c; }
   .card-columns .card .footnote {
     margin-bottom: 0; }
