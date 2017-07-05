@@ -1,0 +1,5 @@
+{
+  "username": "ubuntu",
+  "host": "satsuki.tv",
+  "destination": "/var/www/satsukitv/"
+}

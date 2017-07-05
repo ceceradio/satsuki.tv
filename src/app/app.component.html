@@ -1,0 +1,29 @@
+<div class="nav-container">
+  <div class="container">
+    <nav class="navbar navbar-light bg-white">
+      <a class="navbar-brand" routerLink="/"><img class="logo" src="/assets/img/satsuki.png"/> satsuki.tv</a>
+      <button class="navbar-toggler hidden-md-up pull-xs-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar">
+    &#9776;
+  </button>
+      <ul class="nav navbar-nav pull-xs-right hidden-sm-down">
+        <li class="nav-item" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <a class="nav-link" routerLink="/">About</a>
+        </li>
+        <li class="nav-item" routerLink="/projects" routerLinkActive="active">
+          <a class="nav-link" routerLink="/projects">Projects</a>
+        </li>
+        <li class="nav-item" routerLink="/blog" routerLinkActive="active">
+          <a class="nav-link" routerLink="/blog">Blog</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+<div class="list-group collapse navbar-toggleable-sm hidden-md-up" id="CollapsingNavbar">
+  <a data-toggle="collapse" data-target="#CollapsingNavbar" routerLink="/" class="list-group-item">About</a>
+  <a data-toggle="collapse" data-target="#CollapsingNavbar" routerLink="/projects" class="list-group-item">Projects</a>
+  <a data-toggle="collapse" data-target="#CollapsingNavbar" routerLink="/projects" class="list-group-item">Blog</a>
+</div>
+<div class="container main-container">
+  <router-outlet></router-outlet>
+</div>

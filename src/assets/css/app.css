@@ -1,0 +1,130 @@
+a.clickable {
+  cursor: pointer;
+  cursor: hand; }
+
+a.no-underline:hover {
+  text-decoration: none; }
+
+body {
+  font-family: Roboto, sans-serif;
+  background: #0053B9; }
+
+body > p, body > h1, body > h2, body > h3, body > h4, body > h5, body > h6 {
+  color: #fff; }
+
+.nav-container {
+  background: #fff; }
+  .nav-container .list-group-item {
+    border: none;
+    color: #0053B9; }
+    .nav-container .list-group-item:hover {
+      text-decoration: none; }
+
+nav.white-bg {
+  background: #fff; }
+
+.twitter-tweet {
+  margin: auto; }
+
+.main-container {
+  margin-top: 1rem; }
+
+.navbar {
+  border-radius: 0; }
+
+.navbar-brand {
+  padding-left: 3rem; }
+
+.navbar button {
+  color: rgba(0, 0, 0, 0.8); }
+
+.bio {
+  padding-top: 0.4em; }
+
+.navbar-brand > .logo {
+  position: absolute;
+  height: 2.9rem;
+  top: 0.25rem;
+  left: 0.25rem;
+  display: inline; }
+
+.accounts a {
+  padding: 0.25em;
+  width: 100%;
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+  display: block; }
+  .accounts a img {
+    height: 3em;
+    display: block;
+    margin: auto; }
+.accounts a:not(.btn), .accounts a:active:not(.btn), .accounts a:hover:not(.btn), .accounts a:visited:not(.btn) {
+  text-decoration: none; }
+.accounts div {
+  padding: 0.25em; }
+
+.card {
+  color: #373a3c; }
+  .card .card-text a {
+    color: #373a3c; }
+
+.card-columns .card {
+  display: block;
+  text-indent: 0em;
+  /* To show paragraph starts. */
+  page-break-inside: avoid;
+  /* For Firefox. */
+  -webkit-column-break-inside: avoid;
+  /* For Chrome & friends. */
+  break-inside: avoid;
+  /* For standard browsers like IE. :-) */ }
+  .card-columns .card .card-text p, .card-columns .card .card-text h1, .card-columns .card .card-text h2, .card-columns .card .card-text h3, .card-columns .card .card-text h4, .card-columns .card .card-text h5, .card-columns .card .card-text h6, .card-columns .card .card-text a {
+    color: #373a3c; }
+  .card-columns .card .footnote {
+    margin-bottom: 0; }
+  .card-columns .card a:not(.btn), .card-columns .card a:active:not(.btn), .card-columns .card a:hover:not(.btn), .card-columns .card a:visited:not(.btn) {
+    color: #0053B9; }
+  .card-columns .card .card-img-top {
+    width: 100%;
+    height: auto; }
+  .card-columns .card * {
+    text-indent: 0em;
+    /* To show paragraph starts. */
+    page-break-inside: avoid;
+    /* For Firefox. */
+    -webkit-column-break-inside: avoid;
+    /* For Chrome & friends. */
+    break-inside: avoid;
+    /* For standard browsers like IE. :-) */ }
+
+.blog-line {
+  margin-bottom: 15px; }
+
+.card .tumblr-text .tmblr-full {
+  margin-left: -1.25rem;
+  margin-right: -1.25rem; }
+  .card .tumblr-text .tmblr-full img {
+    width: 100%;
+    height: auto; }
+
+@media (min-width: 544px) {
+  .card-columns {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2; }
+
+  .card-columns.large {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1; } }
+@media (min-width: 992px) {
+  .card-columns {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3; }
+
+  .card-columns.large {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2; } }

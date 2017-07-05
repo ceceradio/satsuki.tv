@@ -1,0 +1,29 @@
+<div class="text-xs-right blog-line">
+  <a class="no-underline" href="https://satsukitv.tumblr.com"><strong>satsukitv.tumblr.com</strong></a>
+  &nbsp;&nbsp;&nbsp;
+  <iframe style="vertical-align:-20%" frameborder="0" border="0" scrolling="no" allowtransparency="true" height="20" width="65" src="https://platform.tumblr.com/v2/follow_button.html?type=follow&amp;tumblelog=satsukitv&amp;color=white"></iframe>
+</div>
+<div [hidden]="posts" class="text-xs-center"><img src="/static/img/hourglass.svg"/></div>
+<div class="card-columns large" [hidden]="!posts">
+  <div class="card blog-card" *ngFor="let post of posts">
+    <a [hidden]="!post.image"><img class="card-img-top" [src]="post.image" alt="Picture for {{post.title}}"></a>
+    <div class="card-block">
+      <h1 class="card-title">{{post.title}}</h1>
+      <p class="card-text tumblr-text" [innerHtml]="getPostBody(post)"></p>
+      <a class="clickable" [hidden]="!post.body_abstract" [routerLink]="[ '/blog', post.id ]">Read more...</a>
+      <p class="card-text">
+        <a class="clickable" [routerLink]="[ '/blog', post.id ]">
+          <small class="text-muted">Posted on {{(post.timestamp*1000)|date: 'MM/dd/yyyy'}}</small>
+        </a>
+      </p>
+      <div class="row">
+        <div class="col-xs-6">
+          <a class="text-muted" target="_blank" [href]="post.short_url">{{post.note_count}} notes</a>
+        </div>
+        <div class="col-xs-6 text-xs-right">
+          <a class="btn btn-sm btn-primary" target="_blank" href="https://www.tumblr.com/reblog/{{post.id}}/{{post.reblog_key}}/?redirect_to={{redirect_url}}"><i class="fa fa-share"></i> Reblog</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
