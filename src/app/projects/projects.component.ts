@@ -9,7 +9,7 @@ import {
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent implements OnInit {
-  projects: Array < any > = [{
+  projects:any[] = [{
       name: "Special Answer",
       url: "https://aat.devfluid.com",
       repository: "https://github.com/satsukitv/answer-a-thing",

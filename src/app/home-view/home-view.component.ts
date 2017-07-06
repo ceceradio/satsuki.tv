@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, ElementRef } from '@angular/core';
 declare var twttr: any;
 @Component({
   selector: 'app-home-view',
@@ -7,25 +7,29 @@ declare var twttr: any;
 })
 export class HomeViewComponent implements OnInit {
   tweetLoaded: boolean = false;
-  chRef: ChangeDetectorRef;
 
-  constructor(private _chRef: ChangeDetectorRef) {
-    this.chRef = _chRef;
-  }
+  constructor(private changeRef: ChangeDetectorRef, private elementRef: ElementRef) {}
 
   ngOnInit() {
-    const self = this;
-    const tweets = ['691643768236277762','702244202684530689', '695346659891359745', '668271435979321344', '631736185363267584', '619308905747714048'];
-    this.tweetLoaded = false;
+    const tweets:string[] = [
+      '691643768236277762',
+      '702244202684530689',
+      '695346659891359745',
+      '668271435979321344',
+      '631736185363267584',
+      '619308905747714048'
+    ];
     if (twttr) {
+      let randomIndex:number;
+      randomIndex = Math.floor(Math.random()*tweets.length);
       twttr.widgets.createTweet(
-          tweets.splice(Math.floor(Math.random()*tweets.length),1)[0],
-          document.getElementById('tweet1'),
-          {}
-        ).then(function() {
-          self.tweetLoaded = true;
-          self.chRef.detectChanges();
-        });
+        tweets[randomIndex],
+        this.elementRef.nativeElement.querySelector('#tweet1'),
+        {}
+      ).then(() => {
+        this.tweetLoaded = true;
+        this.changeRef.detectChanges();
+      });
     }
   }
 
